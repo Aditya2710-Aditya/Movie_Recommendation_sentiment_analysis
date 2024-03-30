@@ -1,4 +1,3 @@
-import os
 import pickle
 import streamlit as st
 import requests
@@ -48,6 +47,9 @@ def fetch_poster(movie_id):
 # Function to recommend movies
 def recommend(movie):
     index = movies[movies['movie_title'] == movie].index[0]
+    cv = CountVectorizer()
+    vectors = cv.fit_transform(movies['comb'])
+    similarity = cosine_similarity(vectors)  
     distances = sorted(list(enumerate(similarity[index])), reverse=True, key=lambda x: x[1])
     recommended_movie_names = []
     recommended_movie_posters = []
