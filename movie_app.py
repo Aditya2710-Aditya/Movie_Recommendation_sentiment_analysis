@@ -8,9 +8,9 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 
 # Get the TMDB API key from environment variable
-api_key = os.getenv('TMDB_API_KEY')
+tmdb_api_key = os.getenv('TMDB_API_KEY')
 
-if not api_key:
+if not tmdb_api_key:
     raise ValueError('TMDB_API_KEY environment variable is not set')
 
 # Load models and data
