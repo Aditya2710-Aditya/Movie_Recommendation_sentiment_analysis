@@ -16,7 +16,6 @@ if not api_key:
 movies = pickle.load(open('movies.pkl', 'rb'))
 nlp_model = pickle.load(open('nlp_model.pkl', 'rb'))
 transform_vectorizer = pickle.load(open('tranform.pkl', 'rb'))
-similarity = pickle.load(open('similarity.pkl', 'rb'))
 
 # Function to fetch reviews from TMDB APIS
 def fetch_reviews(movie_id):
