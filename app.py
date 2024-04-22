@@ -17,7 +17,7 @@ if not tmdb_api_key:
 
 # Load models and data
 movies = joblib.load('movies.pkl')
-nlp_model = joblib.load('nlp_lr_model.pkl')
+nlp_model = joblib.load('nlp_svm_model.pkl')
 transform_vectorizer = joblib.load('transform.pkl')
 
 def get_imdb_id(tmdb_id):
